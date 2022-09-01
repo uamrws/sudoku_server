@@ -1,0 +1,18 @@
+<div id="solve-result">
+        <br>
+        <h1>该题共有 {{ results | length }} 解</h1>
+        <br>
+    {% for result in results %}
+        <br>
+        <h1>第 {{ loop.index }} 解</h1>
+        <br>
+        {% for i in range(9) %}
+            <div class="l l{{ i }}">
+                {% for j in range(9) %}
+                    <span><input readonly type="text" value="{{ result[i][j] or '' }}"></span>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>
+

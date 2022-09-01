@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/index.css?args={{ ran }}">
+</head>
+
+<body>
+    <div id="box">
+        {% for i in range(9) %}
+            <div class="l l{{ i }} row{{ i }}">
+            {% for j in range(9) %}
+                <span><input readonly type="text" ></span>
+            {% endfor %}
+            </div>
+        {% endfor %}
+        <div id="btnBox">
+            <input style="display: none" name="demo" value="[[null, null, null, null, null, null, 9, null, null], [null, 9, 7, null, 4, null, 5, 2, null], [null, null, 4, null, null, null, null, null, null], [null, 6, null, null, 7, null, null, 5, null], [null, null, null, null, 1, null, null, null, 3], [5, null, 9, 2, 8, null, null, null, null], [null, null, null, null, 2, 5, 3, null, 6], [7, null, null, null, 9, null, null, null, null], [null, 4, null, null, 3, null, null, 1, null]]"/>
+            <button id="demo" style="width:100px;height:21px;line-height: 20px;text-align: center">示&nbsp&nbsp&nbsp&nbsp&nbsp例</button>
+            <button id="solve" style="width:100px;height:21px;line-height: 20px;text-align: center">求&nbsp所&nbsp有&nbsp解</button>
+            <button id="solve-one" style="width:100px;height:21px;line-height: 20px;text-align: center">求&nbsp一&nbsp个&nbsp解</button>
+{#            <button id="solve" style="width:100px;height:20px">解&nbsp&nbsp&nbsp&nbsp&nbsp题</button>#}
+        </div>
+    </div>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/index.js?args={{ ran }}"></script>
+</body>
+</html>
